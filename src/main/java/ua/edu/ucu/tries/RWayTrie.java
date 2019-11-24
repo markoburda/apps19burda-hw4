@@ -1,20 +1,68 @@
 package ua.edu.ucu.tries;
 
-public class RWayTrie implements Trie {
+public class RWayTrie implements Trie{
+    static final int R = 26;
+    private Node root;
+    private int size;
+
+    public RWayTrie(){
+        Tuple rootValue = new Tuple(null, 0);
+        this.root = new Node(rootValue);
+        this.size = 0;
+    }
+
+    static class Node {
+        int weight;
+        Node[] links = new Node[R];
+
+        Node(Tuple t) {
+            this.weight = 0;
+            for (int i = 0; i < R; i++)
+                links[i] = null;
+        }
+    }
 
     @Override
     public void add(Tuple t) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        int level;
+        int index;
+        Node currentNode = root;
+        for (level = 0; level < t.weight; level++) {
+            index = t.term.toLowerCase().charAt(level) - 'a';
+            if (currentNode.links[index] == null)
+                currentNode.links[index] = new Node(t);
+            currentNode = currentNode.links[index];
+        }
+        currentNode.weight = t.weight;
+        this.size++;
+    }
+
+    public Node getLeaf(String word){
+        int level;
+        int index;
+        Node currentNode = root;
+
+        for (level = 0; level < word.length(); level++) {
+            index = word.toLowerCase().charAt(level) - 'a';
+//            System.out.println("Current: " + currentNode.links);
+            if (currentNode.links[index] == null)
+                return null;
+            currentNode = currentNode.links[index];
+        }
+        if(currentNode.weight > 0)
+            return currentNode;
+        return null;
     }
 
     @Override
     public boolean contains(String word) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.getLeaf(word) != null;
     }
 
     @Override
     public boolean delete(String word) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        this.size--;
+        return true;
     }
 
     @Override
@@ -29,7 +77,6 @@ public class RWayTrie implements Trie {
 
     @Override
     public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        return this.size;
     }
-
 }
