@@ -59,22 +59,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RWayTrieTest.testLinkedList">
-    <configuration name="PrefixMatchesITTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Autocomplete" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ua.edu.ucu.autocomplete.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ua.edu.ucu.autocomplete" />
-      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.autocomplete.PrefixMatchesITTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.RWayTrieTest.testQueue">
     <configuration name="RWayTrieTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Autocomplete" />
       <extension name="coverage">
@@ -123,6 +108,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RWayTrieTest.testQueue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Autocomplete" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.tries.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.tries" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tries.RWayTrieTest" />
+      <option name="METHOD_NAME" value="testQueue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RWayTrieTest.test_all" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Autocomplete" />
       <extension name="coverage">
@@ -141,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RWayTrieTest.testQueue" />
         <item itemvalue="JUnit.RWayTrieTest.testLinkedList" />
         <item itemvalue="JUnit.RWayTrieTest.test_all" />
         <item itemvalue="JUnit.RWayTrieTest.add_contains" />
         <item itemvalue="JUnit.RWayTrieTest.add" />
-        <item itemvalue="JUnit.PrefixMatchesITTest" />
       </list>
     </recent_temporary>
   </component>
@@ -159,7 +160,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574627353071</updated>
-      <workItem from="1574627355952" duration="13623000" />
+      <workItem from="1574627355952" duration="15473000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,7 @@ package ua.edu.ucu.tries;
 
 import org.junit.Test;
 import ua.edu.ucu.queue.LinkedList;
+import ua.edu.ucu.queue.Queue;
 
 import static org.junit.Assert.*;
 
@@ -37,31 +38,24 @@ public class RWayTrieTest {
 
     @Test
     public void testLinkedList(){
-        /* Start with the empty list. */
         LinkedList list = new LinkedList();
-
-        //
-        // ******INSERTION******
-        //
-
-        // Insert the values
-//        list.insert(1);
-//        list.insert(2);
-//        list.insert(3);
-//        list.insert(4);
-//        list.insert(5);
-//        list.insert(6);
-//        list.insert(7);
-//        list.insert(8);
-//        list.remove(1);
-//        list.remove(2);
-//        list.removeFirst();
-//        list.removeLast();
         list.addFirst(70);
         list.addFirst(25);
         list.addLast(96);
         list.removeLast();
-        // Print the LinkedList
-        list.printList(list);
+    }
+
+    @Test
+    public void testQueue(){
+        Queue testQueue = new Queue();
+        testQueue.enqueue("a");
+        assertEquals(testQueue.peek(), "a");
+        testQueue.enqueue("b");
+        testQueue.dequeue();
+        assertEquals(testQueue.peek(), "b");
+        testQueue.enqueue("c");
+        testQueue.dequeue();
+        assertEquals(testQueue.peek(), "c");
+
     }
 }

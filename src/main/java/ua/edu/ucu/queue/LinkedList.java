@@ -46,22 +46,6 @@ public class LinkedList {
         this.add(e, this.size - 1);
     }
 
-//    public LinkedList insert(Object e)
-//    {
-//        if (this.head == null) {
-//            this.head = new Node(e);
-//        }
-//        else {
-//            Node currentNode = this.head;
-//            while (currentNode.next != null) {
-//                currentNode = currentNode.next;
-//            }
-//            currentNode.next = new Node(e);
-//        }
-//        this.size++;
-//        return this;
-//    }
-
     public void remove(int index){
         Node currentNode = this.head;
         if(index == 0)
@@ -79,23 +63,24 @@ public class LinkedList {
         remove(this.size -1);
     }
 
-    public void removeFirst(){
-        remove(0);
+    public Object get(int index){
+        if(index < 0 || index == 0 && this.head == null || index > this.size){
+            throw new IndexOutOfBoundsException();
+        }
+        else{
+            Node currentNode = this.head;
+            for(int i = 0; i < index; i++) {
+                currentNode = currentNode.next;
+            }
+            return currentNode.value;
+        }
     }
 
-    public static void printList(LinkedList list)
-    {
-        Node currNode = list.head;
+    public Object getLast(){
+        return this.get(this.size - 1);
+    }
 
-        System.out.print("LinkedList: ");
-
-        // Traverse through the LinkedList
-        while (currNode != null) {
-            // Print the data at current node
-            System.out.print(currNode.value + " ");
-
-            // Go to next node
-            currNode = currNode.next;
-        }
+    public void removeFirst(){
+        remove(0);
     }
 }
