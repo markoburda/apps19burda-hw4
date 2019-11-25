@@ -61,6 +61,10 @@ public class RWayTrie implements Trie{
 
     @Override
     public boolean delete(String word) {
+        Node res = this.getLeaf(word);
+        if(this.getLeaf(word) == null)
+            return false;
+        res.weight = 0;
         this.size--;
         return true;
     }
