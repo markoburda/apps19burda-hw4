@@ -1,5 +1,9 @@
 package ua.edu.ucu.tries;
 
+import ua.edu.ucu.queue.Queue;
+
+import java.util.Arrays;
+
 public class RWayTrie implements Trie{
     static final int R = 26;
     private Node root;
@@ -44,7 +48,6 @@ public class RWayTrie implements Trie{
 
         for (level = 0; level < word.length(); level++) {
             index = word.toLowerCase().charAt(level) - 'a';
-//            System.out.println("Current: " + currentNode.links);
             if (currentNode.links[index] == null)
                 return null;
             currentNode = currentNode.links[index];
@@ -71,7 +74,14 @@ public class RWayTrie implements Trie{
 
     @Override
     public Iterable<String> words() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Node currentNode = this.root;
+        Queue queue = new Queue();
+        for (int index = 0; index < R; index++) {
+            if (currentNode.links[index] != null) {
+                queue.enqueue(Integer.toString(index));
+            }
+        }
+        return Arrays.stream(queue.toArray()).iterator();
     }
 
     @Override

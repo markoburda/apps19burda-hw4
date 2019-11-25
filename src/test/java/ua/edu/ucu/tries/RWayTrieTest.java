@@ -56,6 +56,6 @@ public class RWayTrieTest {
         testQueue.enqueue("c");
         testQueue.dequeue();
         assertEquals(testQueue.peek(), "c");
-
+        System.out.println(testQueue.toString());
     }
 }

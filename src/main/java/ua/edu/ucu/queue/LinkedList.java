@@ -1,5 +1,7 @@
 package ua.edu.ucu.queue;
 
+import java.lang.reflect.Array;
+
 public class LinkedList {
     private int size;
     private Node head;
@@ -13,9 +15,10 @@ public class LinkedList {
             this.next = null;
         }
     }
-    public void LinkedList(){
+    public LinkedList LinkedList(){
         this.head = null;
         this.size = 0;
+        return this;
     }
 
     public void add(Object e, int index){
@@ -82,5 +85,26 @@ public class LinkedList {
 
     public void removeFirst(){
         remove(0);
+    }
+
+    public Object[] toArray(){
+        int index = 0;
+        Object[] newArr = new Object[this.size];
+        Node currentNode = this.head;
+        while(currentNode.next != null){
+            currentNode = currentNode.next;
+            newArr[index] = currentNode.value;
+            index++;
+        }
+        return newArr;
+    }
+
+    public String toString(){
+        Object[] newArr = this.toArray();
+        String res = "";
+        for(Object i : newArr){
+            res = "," + i + " ";
+        }
+        return res;
     }
 }

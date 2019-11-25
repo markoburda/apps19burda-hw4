@@ -16,4 +16,8 @@ public class Queue extends LinkedList{
     public Object peek(){
         return this.getLast();
     }
+
+    public String[] toArray(){
+        return this.toArray();
+    }
 }
