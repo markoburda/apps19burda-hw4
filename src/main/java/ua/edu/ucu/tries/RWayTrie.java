@@ -1,9 +1,5 @@
 package ua.edu.ucu.tries;
 
-import ua.edu.ucu.queue.Queue;
-
-import java.util.Arrays;
-
 public class RWayTrie implements Trie{
     static final int R = 26;
     private Node root;
@@ -15,9 +11,9 @@ public class RWayTrie implements Trie{
         this.size = 0;
     }
 
-    static class Node {
-        int weight;
-        Node[] links = new Node[R];
+    public class Node {
+        public int weight;
+        public Node[] links = new Node[R];
 
         Node(Tuple t) {
             this.weight = 0;
@@ -74,19 +70,12 @@ public class RWayTrie implements Trie{
 
     @Override
     public Iterable<String> words() {
-        Node currentNode = this.root;
-        Queue queue = new Queue();
-        for (int index = 0; index < R; index++) {
-            if (currentNode.links[index] != null) {
-                queue.enqueue(Integer.toString(index));
-            }
-        }
-        return Arrays.stream(queue.toArray()).iterator();
+        throw new UnsupportedOperationException();
     }
 
     @Override
     public Iterable<String> wordsWithPrefix(String s) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        throw new UnsupportedOperationException();
     }
 
     @Override

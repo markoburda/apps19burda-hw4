@@ -6,7 +6,7 @@ public class LinkedList {
     private int size;
     private Node head;
 
-    protected class Node {
+    public class Node {
         Object value;
         Node next;
 
@@ -49,21 +49,26 @@ public class LinkedList {
         this.add(e, this.size - 1);
     }
 
-    public void remove(int index){
+    public Object remove(int index){
         Node currentNode = this.head;
-        if(index == 0)
+        Node temp = null;
+        if(index == 0) {
+            temp = this.head;
             this.head = currentNode.next;
+        }
         else {
             for (int i = 0; i < index - 1; i++) {
                 currentNode = currentNode.next;
             }
+            temp = currentNode.next;
             currentNode.next = currentNode.next.next;
         }
         this.size--;
+        return temp;
     }
 
-    public void removeLast(){
-        remove(this.size -1);
+    public Object removeLast(){
+        return remove(this.size -1);
     }
 
     public Object get(int index){
@@ -83,8 +88,8 @@ public class LinkedList {
         return this.get(this.size - 1);
     }
 
-    public void removeFirst(){
-        remove(0);
+    public Object removeFirst(){
+        return remove(0);
     }
 
     public Object[] toArray(){

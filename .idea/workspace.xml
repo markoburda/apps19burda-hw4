@@ -59,24 +59,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RWayTrieTest.testQueue">
-    <configuration name="RWayTrieTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PrefixMatchesITTest">
+    <configuration name="PrefixMatchesITTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Autocomplete" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ua.edu.ucu.tries.*" />
+          <option name="PATTERN" value="ua.edu.ucu.autocomplete.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ua.edu.ucu.tries" />
-      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tries.RWayTrieTest" />
-      <option name="METHOD_NAME" value="add" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.autocomplete" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.autocomplete.PrefixMatchesITTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RWayTrieTest.add_contains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RWayTrieTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Autocomplete" />
       <extension name="coverage">
         <pattern>
@@ -86,8 +85,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ua.edu.ucu.tries" />
       <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.tries.RWayTrieTest" />
-      <option name="METHOD_NAME" value="add_contains" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -142,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PrefixMatchesITTest" />
+        <item itemvalue="JUnit.RWayTrieTest" />
         <item itemvalue="JUnit.RWayTrieTest.testQueue" />
         <item itemvalue="JUnit.RWayTrieTest.testLinkedList" />
         <item itemvalue="JUnit.RWayTrieTest.test_all" />
-        <item itemvalue="JUnit.RWayTrieTest.add_contains" />
-        <item itemvalue="JUnit.RWayTrieTest.add" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +158,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574627353071</updated>
-      <workItem from="1574627355952" duration="18032000" />
+      <workItem from="1574627355952" duration="23481000" />
     </task>
     <servers />
   </component>

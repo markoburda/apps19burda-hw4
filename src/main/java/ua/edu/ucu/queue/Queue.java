@@ -4,13 +4,13 @@ public class Queue extends LinkedList{
     public Queue(){
     }
 
-    public void enqueue(String word) {
-        this.addFirst(word);
+    public void enqueue(Object e) {
+        this.addFirst(e);
     }
 
-    public void dequeue()
+    public Object dequeue()
     {
-        this.removeLast();
+        return this.removeLast();
     }
 
     public Object peek(){
@@ -19,5 +19,9 @@ public class Queue extends LinkedList{
 
     public String[] toArray(){
         return this.toArray();
+    }
+
+    public boolean isEmpty(){
+        return getLast() == null;
     }
 }
